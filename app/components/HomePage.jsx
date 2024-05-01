@@ -3,7 +3,7 @@
 import { Message, experimental_useAssistant as useAssistant } from "ai/react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./loader.module.css";
-
+ import Accordion from "./_Accordion/Accordion";
 import Link from "next/link";
 import QuestionCard from "./QuestionCard";
 import Image from "next/image";
@@ -62,7 +62,7 @@ export default function HomePage() {
 
 
   return (
-    <div className=" flex flex-col w-full  items-center  mt-2  ">
+    <div className=" flex flex-col w-full   items-center  mt-2  ">
       <div className="navigate flex items-center flex-wrap justify-center gap-6 my-6 px-2 w-full sm:text-sm  ">
         {/* <button
           className="bg-gradient-to-br px-4 rounded-lg font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"
@@ -83,7 +83,7 @@ export default function HomePage() {
       </div>
 
       <div className="  w-[90%]   flex flex-col  ">
-        <div>
+        <div className=" ">
           {messages.map((m) => (
             <div key={m.id} className=" py-8 bg-gray-100 rounded-lg  relative ">
               <>
@@ -141,7 +141,7 @@ export default function HomePage() {
       </div>
       <form
         onSubmit={submitMessage}
-        className=" items-center justify-center   w-[90%]  flex">
+        className=" items-center justify-center   w-[90%]  flex ">
         <input
           ref={inputRef}
           disabled={status !== "awaiting_message"}
@@ -161,8 +161,8 @@ export default function HomePage() {
           Ask
         </button> */}
       </form>
-      <h2 className="text-md font-semibold my-4">Few examples to ask</h2>
-      <div className="FAQ w-4/5   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <h2 className="text-md text-[#00afbf] font-semibold my-6">Few examples to ask</h2>
+      {/* <div className="FAQ w-4/5   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {questionArray.map((question) => (
           <input key={question} value={question}  className="bg-white cursor-pointer"  disabled/>
         ))}
@@ -190,7 +190,8 @@ export default function HomePage() {
             </svg>
           </span>
         </button>
-      </div>
+      </div> */}
+  <div className="  mt-2 w-full  "> <Accordion /></div>   
 
       {/* <div className=" p-12  min-h-40 w-full flex flex-col  ">
           <div>

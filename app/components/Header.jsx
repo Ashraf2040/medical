@@ -7,7 +7,7 @@ import Modals from "./Modals";
 export default function Header() {
   const [lang, setLang] = useState("English");
   return (
-    <div className=" shadow-lg flex relative flex-col  pb-4  items-center bg-gray-100">
+    <div className=" shadow-sm flex gap-6 relative flex-col  pb-4  items-center bg-gray-50">
       <div className="flex items-center justify-center w-full ">
        <Link href="/" className="w-3/5 ">
         
