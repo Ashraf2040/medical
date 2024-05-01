@@ -62,8 +62,8 @@ export default function HomePage() {
 
 
   return (
-    <div className=" flex flex-col w-full  items-center    ">
-      <div className="navigate flex items-center flex-wrap justify-center gap-2 m-2 px-2 w-full sm:text-sm  ">
+    <div className=" flex flex-col w-full  items-center  mt-2  ">
+      <div className="navigate flex items-center flex-wrap justify-center gap-6 my-6 px-2 w-full sm:text-sm  ">
         {/* <button
           className="bg-gradient-to-br px-4 rounded-lg font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"
           onClick={handleSerchClick}
@@ -71,24 +71,18 @@ export default function HomePage() {
           Ask Ai
         </button> */}
         <Link href="/medical" className="">
-          <button className="bg-gradient-to-br px-2 rounded-lg font-semibold text-white py-2 from-[#54A15E] to-green-400 ">
+          <button className=" bg-[#dbeefd] px-2 rounded-lg  text-[14px] text-[#00afbf] py-1">
           Nearby Medicals 
           </button>
         </Link>
         <Link href="/healthcare">
-          <button className="bg-gradient-to-br px-2 rounded-lg font-semibold text-white py-2 from-[#54A15E] to-green-400">
+          <button className="bg-[#dbeefd] px-2 rounded-lg  text-[14px] text-[#00afbf] py-1 ">
           Healthcare Education
           </button>
         </Link>
-        <button
-          className="bg-gradient-to-br px-4 rounded-lg w-2/5 font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"
-          onClick={handleSerchClick}
-        >
-          Ask Ai
-        </button>
       </div>
 
-      <div className="  w-[90%]  my-4 flex flex-col  ">
+      <div className="  w-[90%]   flex flex-col  ">
         <div>
           {messages.map((m) => (
             <div key={m.id} className=" py-8 bg-gray-100 rounded-lg  relative ">
@@ -147,21 +141,25 @@ export default function HomePage() {
       </div>
       <form
         onSubmit={submitMessage}
-        className={` items-center  sm:w-4/5 lg:w-2/5 ${
-          !enabled ? "hidden" : "flex"
-        } `}
-      >
+        className=" items-center justify-center   w-[90%]  flex">
         <input
           ref={inputRef}
           disabled={status !== "awaiting_message"}
-          className="  p-4  border border-gray-300 bg-white  rounded shadow-xl w-full"
+          className="  p-2 ring-1 ring-gray-200  outline-none focus:ring-[#00afbf]   bg-white  rounded-[10px]  w-5/6 relative"
           value={input}
           placeholder="Type your question..."
           onChange={handleInputChange}
+          
         />
-        <button className="p-4 bg-black rounded-r-lg -ml-2 font-bold text-white px-4 ">
+        <button className="absolute right-14">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" className="w-6  h-8 text-[#00afbf] ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+</svg>
+
+</button>
+        {/* <button className="p-4 bg-black rounded-r-lg -ml-2 font-bold text-white px-4 ">
           Ask
-        </button>
+        </button> */}
       </form>
       <h2 className="text-md font-semibold my-4">Few examples to ask</h2>
       <div className="FAQ w-4/5   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
