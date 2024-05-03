@@ -71,7 +71,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
       >
         <p className="answer-content flex flex-col">{answer.map((el)=><button key={el} 
         
-        className="py-1 text-sm font-semibold rounded-full mb-5 shadow-md">{el}</button>)}</p>
+        className="py-1 text-sm font-semibold rounded-lg mb-1 border-2 shadow-md border-gray-200">{el}</button>)}</p>
       </div>
     </div>
   );

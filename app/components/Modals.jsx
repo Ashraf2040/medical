@@ -62,7 +62,7 @@ export default function Modals({setLang}) {
     >
       <div className='flex m-auto justify-between'> <h2 ref={(_subtitle) => (subtitle = _subtitle)} className='font-semibold    text-lg mb-4  text-center 
        '>Select Your Language </h2>
-       <span className='font-bold text-lg text-[#02B1BF] ml-4'>X</span>
+       <button onClick={() => setIsOpen(false)} className='font-bold text-lg text-[#02B1BF] ml-4'>X</button>
        </div>
      
       

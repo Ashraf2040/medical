@@ -18,13 +18,13 @@ import Image from 'next/image';
 export default function InfoPage() {
  
       return (
-        <div className='px-4 flex flex-col  '>
+        <div className='px-2 flex flex-col  '>
           <Link href="/healthcare">
           <button className="bg-gradient-to-br px-2 rounded-lg font-semibold text-white py-2 from-[#54A15E] to-green-400 my-2">
           Back 
           </button>
         </Link>
-          <Swiper pagination={true} modules={[Pagination]} className="mySwiper w-4/5">
+          <Swiper pagination={true} modules={[Pagination]} className="mySwiper ">
             <SwiperSlide><Image src="/a.jpg" alt="diaf" width={180} height={180}  className="h-10 w-10" /></SwiperSlide>
             <SwiperSlide><Image src="/b.jpg" alt="diaf" width={180} height={180}  className="h-10 w-10" /></SwiperSlide>
             <SwiperSlide><Image src="/c.jpg" alt="diaf" width={180} height={180}  className="h-10 w-10" /></SwiperSlide>

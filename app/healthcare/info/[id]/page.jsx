@@ -14,6 +14,7 @@ import './styles.css';
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import Link from 'next/link';
 
 
 export default function TopicInfo({params}) {
@@ -32,8 +33,16 @@ export default function TopicInfo({params}) {
      },
   ]
   return (
-    <div className='flex flex-col gap-2 justify-center items-center w-full'>
+    <div className='flex flex-col gap-2 justify-center items-center w-full'> 
+    <div className='flex gap-12 items-center justify-center w-4/5'>
+    <Link href="/healthcare" className=''>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+</svg>
+
+      </Link>
     <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
+    </div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -78,6 +87,8 @@ export default function TopicInfo({params}) {
           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
       </Swiper>
+
+     
     </div>
   );
 }

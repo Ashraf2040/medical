@@ -32,24 +32,24 @@ export default function HealthCare() {
   
   return (
     <div className=' flex flex-col w-full  '>
-      <h1 className='text-lg mb-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
+      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper w-full"
+        className="mySwiper  "
       >
         {dataCards.map((item, index) => (
 
           
-          <SwiperSlide key={index} className='w-full relative'>
+          <SwiperSlide key={index} className=' relative'>
             <Link href={`/healthcare/info/${index}`} className='w-full'>
             <Image
               src={item.src}
               alt="diaf"
-              width={600}
+              width={800}
               height={600}
-              className="w-full h-full"
+              className=" h-full"
             />
             <span className='bg-[#02B1BF] absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
