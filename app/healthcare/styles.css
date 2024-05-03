@@ -1,12 +1,9 @@
-#app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   .swiper {
     width: 77%;
     height: 480px;
+    z-index: 0;
   }
   
   .swiper-slide {

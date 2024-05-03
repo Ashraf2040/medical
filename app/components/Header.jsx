@@ -26,8 +26,8 @@ export default function Header() {
       <div>
 
         <div className="flex items-center justify-center gap-3  h-10 mt-1">
-          <p className="py-2 rounded-md font-semibold  px-3 bg-[#dbeefd] text-[#02B1BF]">{lang}</p>
-          <div><Modals setLang={setLang} /></div>  
+          <p className=" rounded-md font-semibold  px-1 bg-[#dbeefd] text-[#02B1BF]">{lang}</p>
+          <div className=""><Modals setLang={setLang} /></div>  
         
         </div>
       {/* <select
