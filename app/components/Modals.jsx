@@ -61,9 +61,9 @@ export default function Modals({setLang}) {
       onRequestClose={closeModal}
       style={customStyles}
       contentLabel="Example Modal"
-      className="z-50"
+    
     >
-      <div className='flex m-auto justify-between'> <h2 ref={(_subtitle) => (subtitle = _subtitle)} className='font-semibold    text-lg mb-4  text-center 
+      <div className='flex m-auto justify-between items-center'> <h2 ref={(_subtitle) => (subtitle = _subtitle)} className='font-semibold    text-lg mb-4  text-center 
        '>Select Your Language </h2>
        <button onClick={() => setIsOpen(false)} className='font-bold text-lg text-[#02B1BF] ml-4'>X</button>
        </div>
