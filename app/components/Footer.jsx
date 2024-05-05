@@ -1,14 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
   return (
     <div
-      className="
-      w-full bg-[#F6E8DD]   flex items-center justify-between  px-12 h-16  "
+      className="w-full bg-gray-100 py-2  gap-4  flex items-center justify-between flex-col  px-6 h-fit "
     >
-      <p className=" ">A.I Assistant for the Guests of Allah</p>
-    <Image src="/logo.png" alt="diaf" width={180} height={180}  className="h-10 w-10"/>
+      <div className="flex w-[90%] justify-between font-semibold text-[#02B1BF]">
+        <Link href="/about">About</Link>
+        <Link href="/privacy">Privacy Policy</Link>
+        <Link href="/terms">Terms of Use</Link>
+      </div>
+    <Image src="/logo1.png" alt="diaf" width={600} height={800}  className="w-3/5 "/>
     </div>
   );
 }

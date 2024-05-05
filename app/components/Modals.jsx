@@ -42,7 +42,7 @@ export default function Modals({setLang}) {
   }
 
   const languges =[
-    "English","French","Urdu","Deutch","Arabic","Spanich", "English","French"
+    "English","Français","اردو","Deutsch","العربية","Española", "Türkçe","dell'Italia"
    
   ]
   return (

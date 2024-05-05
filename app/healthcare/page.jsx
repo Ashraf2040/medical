@@ -31,7 +31,7 @@ const dataCards = [
 export default function HealthCare() {
   
   return (
-    <div className=' flex flex-col w-full  '>
+    <div className=' flex flex-col w-full  h-screen'>
       <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
       <Swiper
         effect={'cards'}

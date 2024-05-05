@@ -15,12 +15,10 @@ export default function HomePage() {
     });
 
   const askedQuestions1 = [
-    "ماهي مناسك الحج؟",
-    "ماهي مناسك العمرة؟",
-    "ماهو ميقات اهل المدينة؟",
-    "ماهي شروط حج التمتع ؟",
-    "كيفية لبس الاحرام ؟",
-    "مالفرق بين التحلل الاكبر والاصغر؟",
+    "How to improve soil condition? "
+    ,"What are  methods for pest control on cabbage?",
+    "What is the best time to plant okra in north india?",
+    "How to improve soil condition?"
   ];
   const askedQuestions2 = [
     "ماهي مناسك الحج1؟",
@@ -62,7 +60,7 @@ export default function HomePage() {
 
 
   return (
-    <div className=" flex flex-col w-full   items-center  mt-2  ">
+    <div className=" flex flex-col w-full border-2    items-center  mt-2   ">
       <div className="navigate flex items-center flex-wrap justify-center gap-6 my-6 px-2 w-full sm:text-sm  ">
         {/* <button
           className="bg-gradient-to-br px-4 rounded-lg font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"
@@ -162,12 +160,14 @@ export default function HomePage() {
         </button> */}
       </form>
       <h2 className="text-md text-[#00afbf] font-semibold my-6">Few examples to ask</h2>
-      {/* <div className="FAQ w-4/5   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {questionArray.map((question) => (
-          <input key={question} value={question}  className="bg-white cursor-pointer"  disabled/>
-        ))}
+      <div className="FAQ w-[90%]   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-2 w-full"> 
+          {questionArray.map((question) => (
+          <button key={question}   className="bg-white cursor-pointer border-2 shadow-sm rounded-lg text-[#00afbf] py-2"  >{question}</button>
+        ))}</div>
+       
       </div>
-      <div className=" 0 w-4/5 flex justify-center items-center py-4 ">
+      {/* <div className=" 0 w-4/5 flex justify-center items-center py-4 ">
         <button
           className="flex  gap-1 w-fit  font-semibold  text-green-900"
           onClick={handleClick}
@@ -191,6 +191,7 @@ export default function HomePage() {
           </span>
         </button>
       </div> */}
+      <h2 className="text-md text-[#00afbf] font-semibold mt-8 mb-4 bg-[#dbeefd] px-4  py-2 rounded-md"> Addtional Tips</h2>
   <div className="  mt-2 w-full  "> <Accordion /></div>   
 
       {/* <div className=" p-12  min-h-40 w-full flex flex-col  ">
