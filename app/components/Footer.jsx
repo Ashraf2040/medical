@@ -7,12 +7,12 @@ export default function Footer() {
     <div
       className="w-full bg-gray-100 py-2  gap-4  flex items-center justify-between flex-col  px-6 h-fit "
     >
-      <div className="flex w-[90%] justify-between font-semibold text-[#02B1BF]">
+      <div className="flex w-[90%] justify-between py-4 font-semibold text-[#02B1BF]">
         <Link href="/about">About</Link>
         <Link href="/privacy">Privacy Policy</Link>
         <Link href="/terms">Terms of Use</Link>
       </div>
-    <Image src="/logo1.png" alt="diaf" width={600} height={800}  className="w-3/5 "/>
+    
     </div>
   );
 }
