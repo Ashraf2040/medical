@@ -1,62 +1,102 @@
-
 "use client";
-
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 import './styles.css';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import Link from 'next/link';
 
-
-export default function TopicInfo({params}) {
+export default function App({params}) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const dataCards = [
-    { 
-      src :"/1.jpg",
-      title: " Hazards in the Workplace",
-     },
-    { 
-      src :"/2.jpg",
-      title: "Hygiene in the Workplace",
-     },
-    { 
-      src :"/3.jpg",
-      title: "Cybersecurity Fundamentals",
-     },
-  ]
-  return (
-    <div className='flex flex-col gap-2  items-center w-full h-screen'> 
-    <div className='flex gap-12 items-center justify-center w-4/5'>
-    <Link href="/healthcare" className=''>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-</svg>
+        { 
+          src :"/1.jpg",
+          title: " Hazards in the Workplace",
+         },
+        { 
+          src :"/2.jpg",
+          title: "Hygiene in the Workplace",
+         },
+        { 
+          src :"/3.jpg",
+          title: "Cybersecurity Fundamentals",
+         },
+      ]
 
-      </Link>
+  return (
+    <div className='mt-16 p-4 h-screen'>
+
+<div className='flex  mb-12 items-center justify-between w-full '>
+     <Link href="/healthcare" className=''>
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+ </svg>
+
+     </Link>
     <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
-    </div>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
+     </div>
+      <div> 
+        
+        <Swiper
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        loop={true}
+        spaceBetween={10}
+        navigation={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper2 h-full"
+      >
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        </SwiperSlide>
+      </Swiper>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        loop={true}
+        spaceBetween={10}
+        slidesPerView={4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -86,12 +126,231 @@ export default function TopicInfo({params}) {
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
-      </Swiper>
-
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        </SwiperSlide>
+      </Swiper></div>
      
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import React, { useRef, useState } from 'react';
+// // Import Swiper React components
+// import { Swiper, SwiperSlide } from 'swiper/react';
+
+// // Import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// // import required modules
+// import { EffectCoverflow, Pagination } from 'swiper/modules';
+// import Link from 'next/link';
+
+
+// export default function TopicInfo({params}) {
+//   const dataCards = [
+//     { 
+//       src :"/1.jpg",
+//       title: " Hazards in the Workplace",
+//      },
+//     { 
+//       src :"/2.jpg",
+//       title: "Hygiene in the Workplace",
+//      },
+//     { 
+//       src :"/3.jpg",
+//       title: "Cybersecurity Fundamentals",
+//      },
+//   ]
+//   return (
+//     <div className='flex flex-col gap-2  items-center w-full h-screen'> 
+//     <div className='flex gap-12 items-center justify-center w-4/5'>
+//     <Link href="/healthcare" className=''>
+//       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
+//   <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+// </svg>
+
+//       </Link>
+//     <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
+//     </div>
+//       <Swiper
+//         effect={'coverflow'}
+//         grabCursor={true}
+//         centeredSlides={true}
+//         slidesPerView={'auto'}
+//         coverflowEffect={{
+//           rotate: 50,
+//           stretch: 0,
+//           depth: 100,
+//           modifier: 1,
+//           slideShadows: true,
+//         }}
+//         pagination={true}
+//         modules={[EffectCoverflow, Pagination]}
+//         className="mySwiper"
+//       >
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+//         </SwiperSlide>
+//         <SwiperSlide>
+//           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+//         </SwiperSlide>
+//       </Swiper>
+
+     
+//     </div>
+//   );
+// }
 
 
 
