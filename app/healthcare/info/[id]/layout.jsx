@@ -1,8 +1,6 @@
 
 import { Inter } from "next/font/google";
 
-
-
 import Footer from "../../../components/Footer";
 
 
@@ -15,12 +13,14 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html  lang="en" className=" p-0 bg-white min-h-screen relative">
+    <html  lang="en" className="m-0 p-0 bg-white min-h-screen relative">
       <body className={`${inter.className} flex flex-col h-screen`}>
         
         <div>{children}</div>
 
-       
+        <div className="  bottom-0 w-full">
+      
+        </div>
       </body>
     </html>
   );
