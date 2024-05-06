@@ -12,11 +12,14 @@ import 'swiper/css/effect-creative';
 import './styles.css';
 
 // import required modules
-import { EffectCreative, Navigation } from 'swiper/modules';
+import { EffectCreative, Navigation, Pagination } from 'swiper/modules';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function TopicInfo({params}) {
+
+ 
   const dataCards = [
     { 
       src :"/1.jpg",
@@ -31,28 +34,33 @@ export default function TopicInfo({params}) {
       title: "Cybersecurity Fundamentals",
      },
   ]
+  const images = ["/1.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c,jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
   return (
     <div className='flex flex-col   items-center w-full h-screen'> 
-    <div className='flex  items-center gap-4 flex-col justify-center w-4/5'>
-    <Link href="/healthcare" className='self-start'>
+    <div className='flex  items-center gap-8  justify-center mt-6 '>
+    <Link href="/healthcare" className=''>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6   h-6 text-[#02B1BF]">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
 </svg>
 
       </Link>
-    <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
+    <h1 className='text-lg   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
     </div>
    
       <Swiper
         grabCursor={true}
         effect={'creative'}
+        pagination={{
+          type: 'progressbar',
+        }}
+       
         creativeEffect={{
           prev: {
             shadow: true,
             translate: ['-20%', 0, -1],
           },
           next: {
-            translate: ['100%', 0, 0],
+            translate: ['100%', 0, 1],
           },
         }}
         modules={[EffectCreative]}
@@ -63,16 +71,22 @@ export default function TopicInfo({params}) {
         }}
        
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+     
+
+     {images.map((image, index) => 
+     
+       <SwiperSlide key={index} className='relative '  >
+         <Image src={image} alt="diaf"   className="w-full " fill  />
+         
+       </SwiperSlide>
+
+       
+       
+     )}
+        
       </Swiper>
+
+     
       
      
     </div>
@@ -91,6 +105,61 @@ export default function TopicInfo({params}) {
 
 
 
+
+
+
+
+
+
+
+
+
+{/* <SwiperSlide>
+          
+          <Image src="/a.jpg" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/b.jpg" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide> */}
+        {/* <SwiperSlide>
+          
+          <Image src="/c.jpg" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/d.jpg" alt="diaf"   className="w-full" fill />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/44.png" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/38.png" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/39.png" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/43.png" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide>
+        <SwiperSlide>
+          
+          <Image src="/44.png" alt="diaf"   className="w-full" fill  />
+          
+          </SwiperSlide> */}
+      
 
 
 
