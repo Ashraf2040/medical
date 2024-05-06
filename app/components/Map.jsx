@@ -18,25 +18,25 @@ export default function Map() {
          
             const {Map}= await loader.importLibrary("maps") 
             const position = {
-                lat: 39.80186975922447,
-                lng:  21.468419412171297,
+                lat: 21.422510,
+                lng: 39.826168,
             }
             const mapOptions = {
                 center: position,
                 zoom: 17,
-                mapId:"my-map-id",
+                mapId:"my_map_id",
             }
             const map = new Map(mapRef.current, mapOptions)
-            // const marker = new google.maps.Marker({
-            //     position,
-            //     map
-            // })
+            const marker = new google.maps.Marker({
+                position,
+                map
+            })
         }
         initMap()
     },[])
   return (
     <div>
-        <div ref={mapRef} className="w-full h-screen" />
+        <div cn ref={mapRef} className="w-full h-screen" />
     </div>
   )
 }

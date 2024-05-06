@@ -44,11 +44,12 @@
   } */
   
   .swiper {
-    margin: 100px auto;
-    width: 90%;
-    height: 80%;
+    margin: 20px 0 0 0;
+    
+    width: 95%;
+    height: 75%;
     border-radius: 15px;
-    border: 2px solid gray;
+    border: 2px solid white ;
   }
   
   

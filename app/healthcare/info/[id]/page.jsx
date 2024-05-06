@@ -12,14 +12,14 @@ import 'swiper/css/effect-creative';
 import './styles.css';
 
 // import required modules
-import { EffectCreative, Navigation, Pagination } from 'swiper/modules';
+import { EffectCreative, } from 'swiper/modules';
 import Link from 'next/link';
 import Image from 'next/image';
 
 
 export default function TopicInfo({params}) {
 
- 
+ const [currentIndex, setCurrentIndex] = useState(0);
   const dataCards = [
     { 
       src :"/1.jpg",
@@ -34,60 +34,56 @@ export default function TopicInfo({params}) {
       title: "Cybersecurity Fundamentals",
      },
   ]
-  const images = ["/1.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
+  
   return (
-    <div className='flex flex-col   items-center w-full h-screen'> 
-    <div className='flex  items-center gap-8  justify-center mt-6 '>
+    <div className='flex flex-col bg-gray-100   items-center w-full h-screen pt-8'> 
+    <div className='flex  items-center gap-4  justify-center  '>
     <Link href="/healthcare" className=''>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6   h-6 text-[#02B1BF]">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
 </svg>
 
       </Link>
-    <h1 className='text-lg   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
+    <h1 className='text-2xl   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
     </div>
    
-      <Swiper
+    <Swiper
         grabCursor={true}
         effect={'creative'}
-        pagination={{
-          el: '.swiper-pagination',
-          type: 'progressbar',
-        }}
-       
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: ['-20%', 0, -1],
+            translate: [0, 0, -400],
           },
           next: {
-            translate: ['100%', 0, 1],
+            translate: ['100%', 0, 0],
           },
         }}
         modules={[EffectCreative]}
-        className="mySwiper3  w-full"
-        style={{
-          '--swiper-navigation-color': 'red',
-          '--swiper-pagination-color': 'red',
+        className="mySwiper"
+        onSlideChange={(e) => {
+          const activeIndex = e.activeIndex;
+          setCurrentIndex(activeIndex);
         }}
-       
       >
      
 
      {images.map((image, index) => 
+
+   
      
        <SwiperSlide key={index} className='relative '  >
-         <Image src={image} alt="diaf"   className="w-full " fill  />
+         <Image src={image}  alt="diaf"   className="w-full " fill  />
          
        </SwiperSlide>
-
-       
+      
+      
        
      )}
         
       </Swiper>
 
-     
+      <p className='font-bold text-2xl   shadow-sm shadow-[#02B1BF] border-gray-400  rounded-2xl text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
       
      
     </div>
@@ -102,7 +98,7 @@ export default function TopicInfo({params}) {
 
 
 
-
+const images = ["/1.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
 
 
 
