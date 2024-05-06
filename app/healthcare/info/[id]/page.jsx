@@ -36,11 +36,7 @@ export default function TopicInfo({params}) {
   ]
   
   return (
-<<<<<<< HEAD
     <div className='flex flex-col bg-gray-100 h-screen relative     items-center w-full  pt-8'> 
-=======
-    <div className='flex flex-col bg-gray-100 border-b-4  items-center w-full h-screen pt-8'> 
->>>>>>> b733a1ef76233d4c72cd374943eda10fdb24e24d
     <div className='flex  items-center gap-4  justify-center  '>
     <Link href="/healthcare" className='text-[#02B1BF]'>
      
