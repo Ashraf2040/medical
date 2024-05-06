@@ -18,7 +18,7 @@
     /* border: 2px solid red; */
   }
   .wrapper{
-    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.371);
+    box-shadow: 0 0 5px 2px rgba(128, 128, 128, 0.28);
     border-radius: 10px;
     overflow: hidden;
    
@@ -46,7 +46,6 @@
 
   .question-container.active{
     color: #00afbf;
-    background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
   }
   .wrapper .question-container:hover{
     background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
@@ -61,6 +60,7 @@
   }
   .wrapper .answer-container{
     padding: 0 1rem;
+    
   
     transition: height .7s ease-in-out;
   }

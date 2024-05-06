@@ -1,135 +1,79 @@
+
 "use client";
+
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import 'swiper/css/effect-creative';
 
 import './styles.css';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { EffectCreative, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 
-export default function App({params}) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+export default function TopicInfo({params}) {
   const dataCards = [
-        { 
-          src :"/1.jpg",
-          title: " Hazards in the Workplace",
-         },
-        { 
-          src :"/2.jpg",
-          title: "Hygiene in the Workplace",
-         },
-        { 
-          src :"/3.jpg",
-          title: "Cybersecurity Fundamentals",
-         },
-      ]
-
+    { 
+      src :"/1.jpg",
+      title: " Hazards in the Workplace",
+     },
+    { 
+      src :"/2.jpg",
+      title: "Hygiene in the Workplace",
+     },
+    { 
+      src :"/3.jpg",
+      title: "Cybersecurity Fundamentals",
+     },
+  ]
   return (
-    <div className='mt-16 p-4 h-screen'>
-
-<div className='flex  mb-12 items-center justify-between w-full '>
-     <Link href="/healthcare" className=''>
-     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
+    <div className='flex flex-col   items-center w-full h-screen'> 
+    <div className='flex  items-center gap-4 flex-col justify-center w-4/5'>
+    <Link href="/healthcare" className='self-start'>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6   h-6 text-[#02B1BF]">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
- </svg>
+</svg>
 
-     </Link>
+      </Link>
     <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
-     </div>
-      <div> 
-        
-        <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2 h-full"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
+    </div>
+   
       <Swiper
-        onSwiper={setThumbsSwiper}
-        loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper3"
+        style={{
+          '--swiper-navigation-color': 'red',
+          '--swiper-pagination-color': 'red',
+        }}
+       
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper></div>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+      
      
     </div>
   );
@@ -212,223 +156,91 @@ export default function App({params}) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// "use client";
-
-// import React, { useRef, useState } from 'react';
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/effect-coverflow';
-// import 'swiper/css/pagination';
-
-// import './styles.css';
-
-// // import required modules
-// import { EffectCoverflow, Pagination } from 'swiper/modules';
-// import Link from 'next/link';
-
-
-// export default function TopicInfo({params}) {
-//   const dataCards = [
-//     { 
-//       src :"/1.jpg",
-//       title: " Hazards in the Workplace",
-//      },
-//     { 
-//       src :"/2.jpg",
-//       title: "Hygiene in the Workplace",
-//      },
-//     { 
-//       src :"/3.jpg",
-//       title: "Cybersecurity Fundamentals",
-//      },
-//   ]
-//   return (
-//     <div className='flex flex-col gap-2  items-center w-full h-screen'> 
-//     <div className='flex gap-12 items-center justify-center w-4/5'>
-//     <Link href="/healthcare" className=''>
-//       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 mt-4  h-6 text-[#02B1BF]">
-//   <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-// </svg>
-
-//       </Link>
-//     <h1 className='   text-[#02B1BF] mt-6 w-fit   bg-[#dbeefd] rounded-lg p-3'>{dataCards[params.id].title}</h1>
-//     </div>
-//       <Swiper
-//         effect={'coverflow'}
-//         grabCursor={true}
-//         centeredSlides={true}
-//         slidesPerView={'auto'}
-//         coverflowEffect={{
-//           rotate: 50,
-//           stretch: 0,
-//           depth: 100,
-//           modifier: 1,
-//           slideShadows: true,
-//         }}
-//         pagination={true}
-//         modules={[EffectCoverflow, Pagination]}
-//         className="mySwiper"
-//       >
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-//         </SwiperSlide>
-//       </Swiper>
-
-     
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{/* <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [180, 0, 0],
+          },
+          next: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [-180, 0, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper4"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+      <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: ['-125%', 0, -800],
+            rotate: [0, 0, -90],
+          },
+          next: {
+            shadow: true,
+            translate: ['125%', 0, -800],
+            rotate: [0, 0, 90],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper5"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+      <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            origin: 'left center',
+            translate: ['-5%', 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: 'right center',
+            translate: ['5%', 0, -200],
+            rotate: [0, -100, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper6"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper> */}
 
 
 
@@ -526,3 +338,54 @@ export default function App({params}) {
 <p className='my-8 text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, porro, quas dolorem pariatur deserunt quo culpa molestiae perspiciatis ratione, explicabo iusto sapiente sunt odio. Quae modi adipisci voluptates doloribus accusantium voluptate, eveniet odio ab error dolor quia, consequatur assumenda enim minima velit aliquam. Nihil, rem voluptates ea perferendis est magnam!</p>
 <Link href="/medical"><button className='bg-black font-bold py-2 px-8 text-center rounded-lg text-white'>Back to Cards</button></Link>
 </div> */}
+ {/* <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+      <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: ['-120%', 0, -500],
+          },
+          next: {
+            shadow: true,
+            translate: ['120%', 0, -500],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper2"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper> */}

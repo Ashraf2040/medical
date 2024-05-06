@@ -33,12 +33,12 @@ export default function HealthCare() {
   return (
     <div className='my-8'>
     <div className=' flex flex-col w-full '>
-      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
+      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Category 1</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper  "
+        className="mySwiper relative  "
       >
         {dataCards.map((item, index) => (
 
@@ -51,6 +51,8 @@ export default function HealthCare() {
               width={800}
               height={600}
               className=" h-full"
+              priority
+              key={1}
             />
             <span className='text-[#02B1BF] bg-white rounded-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
@@ -70,12 +72,12 @@ export default function HealthCare() {
       </Swiper>
     </div>
     <div className=' flex flex-col w-full  '>
-      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
+      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Category 2</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper  "
+        className="mySwiper relative  "
       >
         {dataCards.map((item, index) => (
 
@@ -88,6 +90,8 @@ export default function HealthCare() {
               width={800}
               height={600}
               className=" h-full"
+              priority
+              key={2}
             />
             <span className='text-[#02B1BF] bg-white rounded-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
@@ -107,12 +111,12 @@ export default function HealthCare() {
       </Swiper>
     </div>
     <div className=' flex flex-col w-full  '>
-      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
+      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Category 3</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper  "
+        className="mySwiper  relative  "
       >
         {dataCards.map((item, index) => (
 
@@ -125,6 +129,8 @@ export default function HealthCare() {
               width={800}
               height={600}
               className=" h-full"
+              priority
+              key={3}
             />
             <span className='text-[#02B1BF] bg-white rounded-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
@@ -144,12 +150,12 @@ export default function HealthCare() {
       </Swiper>
     </div>
     <div className=' flex flex-col w-full  '>
-      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Choose topic for more info...</h1>
+      <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Category 4</h1>
       <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper  "
+        className="mySwiper  relative  "
       >
         {dataCards.map((item, index) => (
 
@@ -162,6 +168,8 @@ export default function HealthCare() {
               width={800}
               height={600}
               className=" h-full"
+              priority
+              key={4}
             />
             <span className='text-[#02B1BF] bg-white rounded-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
