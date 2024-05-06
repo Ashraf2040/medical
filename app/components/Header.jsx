@@ -12,11 +12,11 @@ export default function Header() {
        <Link href="/" className="w-[50%] ">
         
          <Image
-          src="/Logo1.png"
-          height={200}
+          src="/Logosmall.png"
+          height={400}
           width={400}
           alt="logo"
-          className=" mt-2 mb-2 w-full h-16"
+          className=" mt-4 mb-2 w-full "
         /></Link>
         {/* <Image src="/diaf.png" alt="diaf" width={180} height={180} /> */}
       </div>

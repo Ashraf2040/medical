@@ -36,12 +36,14 @@ export default function TopicInfo({params}) {
   ]
   
   return (
-    <div className='flex flex-col bg-gray-100   items-center w-full h-screen pt-8'> 
+    <div className='flex flex-col bg-gray-100 h-screen relative     items-center w-full  pt-8'> 
     <div className='flex  items-center gap-4  justify-center  '>
-    <Link href="/healthcare" className=''>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6   h-6 text-[#02B1BF]">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+    <Link href="/healthcare" className='text-[#02B1BF]'>
+     
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
 </svg>
+
 
       </Link>
     <h1 className='text-2xl   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
@@ -60,7 +62,7 @@ export default function TopicInfo({params}) {
           },
         }}
         modules={[EffectCreative]}
-        className="mySwiper"
+        className="h-3/4 w-[95%] mt-5 border-2 border-white"
         onSlideChange={(e) => {
           const activeIndex = e.activeIndex;
           setCurrentIndex(activeIndex);
@@ -72,8 +74,8 @@ export default function TopicInfo({params}) {
 
    
      
-       <SwiperSlide key={index} className='relative '  >
-         <Image src={image}  alt="diaf"   className="w-full " fill  />
+       <SwiperSlide key={index} className=' '  >
+         <Image src={image}  alt="diaf"    className=""    fill   />
          
        </SwiperSlide>
       
@@ -83,7 +85,7 @@ export default function TopicInfo({params}) {
         
       </Swiper>
 
-      <p className='font-bold text-2xl   shadow-sm shadow-[#02B1BF] border-gray-400  rounded-2xl text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
+      <p className='font-semibold     border-gray-400  rounded-lg text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
       
      
     </div>
