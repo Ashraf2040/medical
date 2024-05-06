@@ -51,6 +51,7 @@ export default function TopicInfo({params}) {
         grabCursor={true}
         effect={'creative'}
         pagination={{
+          el: '.swiper-pagination',
           type: 'progressbar',
         }}
        
@@ -64,7 +65,7 @@ export default function TopicInfo({params}) {
           },
         }}
         modules={[EffectCreative]}
-        className="mySwiper3"
+        className="mySwiper3  w-full"
         style={{
           '--swiper-navigation-color': 'red',
           '--swiper-pagination-color': 'red',
