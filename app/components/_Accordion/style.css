@@ -22,6 +22,8 @@
     border-radius: 10px;
     overflow: hidden;
    
+    margin-bottom: 5px;
+   
   }
   .wrapper .question-container{
     width: 100%;
