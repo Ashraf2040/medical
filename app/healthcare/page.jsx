@@ -54,7 +54,7 @@ export default function HealthCare() {
               priority
               key={1}
             />
-            <span className='text-[#02B1BF] bg-white rounded-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
+            <span className='text-[#02B1BF] bg-white rounded-b-lg absolute top-0 right-0 px-4 py-1'>{index+1} of {dataCards.length}</span>
             <p className="text-md text-center w-full py-6 font-semibold absolute bottom-0 bg-white text-[#02B1BF]">{item.title}</p>
             </Link>
             
