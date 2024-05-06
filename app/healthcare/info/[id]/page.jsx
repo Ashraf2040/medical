@@ -34,7 +34,7 @@ export default function TopicInfo({params}) {
       title: "Cybersecurity Fundamentals",
      },
   ]
-  const images = ["/1.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c,jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
+  const images = ["/1.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
   return (
     <div className='flex flex-col   items-center w-full h-screen'> 
     <div className='flex  items-center gap-8  justify-center mt-6 '>
