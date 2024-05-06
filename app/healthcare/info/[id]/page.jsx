@@ -37,7 +37,7 @@ export default function TopicInfo({params}) {
   
   return (
     <div className='flex flex-col bg-gray-100 h-screen relative     items-center w-full  pt-8'> 
-    <div className='flex  items-center gap-4  justify-center  '>
+    <div className='flex  items-center gap-4  justify-center '>
     <Link href="/healthcare" className='text-[#02B1BF]'>
      
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
@@ -85,11 +85,7 @@ export default function TopicInfo({params}) {
         
       </Swiper>
 
-<<<<<<< HEAD
-      <p className='font-semibold     border-gray-400  rounded-lg text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
-=======
-      <p className='font-bold text-xl    border-gray-400  rounded-2xl text-[#02B1BF] p-2 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
->>>>>>> b733a1ef76233d4c72cd374943eda10fdb24e24d
+      <p className='font-semibold   border-gray-400  rounded-lg text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
       
      
     </div>
