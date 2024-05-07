@@ -99,7 +99,7 @@ export default function TopicInfo({params}) {
 
 
 
-// vcnvn
+
 
 
 const images = ["/sy.jpg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
