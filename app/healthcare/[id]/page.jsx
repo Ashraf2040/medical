@@ -87,7 +87,7 @@ export default function TopicInfo({params}) {
         
       </Swiper>
 
-      <p className='font-semibold   border-gray-400  rounded-lg text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
+      <p className='font-semibold   border-gray-400  rounded-[15px] text-[#02B1BF] p-4 py-2 mt-6'> {`${currentIndex+1} of ${images.length} `}</p>
       
      
     </div>
@@ -102,7 +102,7 @@ export default function TopicInfo({params}) {
 
 
 
-const images = ["/Syringe.svg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
+const images = ["/syringe.svg","/2.jpg","/3.jpg","/a.jpg","/b.jpg" ,"/c.jpg","/d.jpg","/e.jpg","/f.jpg" ,"/38.png","/39.png"];
 
 
 
