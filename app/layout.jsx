@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 
 
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], preload: true, display: "swap" });
 
 
 
