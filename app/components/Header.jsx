@@ -35,7 +35,7 @@ export default function Header() {
 
         
         className="bg-gray-300 font-semibold p-2 rounded-md  mr-2 mt-4  "<
-        
+        fgg
       >
         <option value="en" className="flex  items-center  ">
           
