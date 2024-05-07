@@ -17,6 +17,7 @@ export default function Header() {
           width={400}
           alt="logo"
           className=" mt-4 mb-2 w-full "
+          priority
         /></Link>
         {/* <Image src="/diaf.png" alt="diaf" width={180} height={180} /> */}
       </div>

@@ -36,7 +36,7 @@ export default function TopicInfo({params}) {
   ]
   
   return (
-    <div className='flex flex-col bg-gray-100 h-screen relative     items-center w-full  pt-8'> 
+    <div className='flex flex-col bg-gray-100 h-screen      items-center w-full  border-b-2 border-white  pt-8'> 
     <div className='flex  items-center gap-4  justify-center  '>
     <Link href="/healthcare" className='text-[#02B1BF]'>
      
@@ -48,6 +48,7 @@ export default function TopicInfo({params}) {
       </Link>
     <h1 className='text-2xl   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
     </div>
+   
    
     <Swiper
         grabCursor={true}
@@ -62,12 +63,13 @@ export default function TopicInfo({params}) {
           },
         }}
         modules={[EffectCreative]}
-        className="h-3/4 w-[95%] mt-5 border-2 border-white"
+        className="swiper min-h-[75%] min-w-[95%]"
         onSlideChange={(e) => {
           const activeIndex = e.activeIndex;
           setCurrentIndex(activeIndex);
         }}
       >
+     
      
 
      {images.map((image, index) => 
@@ -75,7 +77,7 @@ export default function TopicInfo({params}) {
    
      
        <SwiperSlide key={index} className=' '  >
-         <Image src={image}  alt="diaf"    className=""    fill   />
+         <Image src={image}  alt="diaf"   className="object-cover h-full "    priority fill  />
          
        </SwiperSlide>
       

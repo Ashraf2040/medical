@@ -60,7 +60,7 @@ export default function HomePage() {
 
 
   return (
-    <div className=" flex flex-col w-full min-h-screen    items-center  mt-2   ">
+    <div className=" flex flex-col w-full h-screen    items-center  mt-2   ">
       <div className="navigate flex items-center flex-wrap justify-center gap-6 my-6 px-2 w-full sm:text-sm  ">
         {/* <button
           className="bg-gradient-to-br px-4 rounded-lg font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"

@@ -8,12 +8,13 @@
   }
    
   body {
-    background: #eee;
+    /* background: #eee; */
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
    
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }  
   
  
@@ -23,9 +24,9 @@
     /* background: #fff; */
   
     /* Center slide text vertically */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   
   
@@ -34,14 +35,13 @@
     color: #000;
   } */
   
-  /* .swiper {
-    margin: 20px 0 0 0;
-    
-    width: 95%;
+  .swiper {
+    margin: 20px 0 0 0; 
+    width: 95% !important;
     height: 75%;
     border-radius: 15px;
     border: 2px solid white ;
-  } */
+  }
   
   
   

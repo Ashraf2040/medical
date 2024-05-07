@@ -31,8 +31,8 @@ const dataCards = [
 export default function HealthCare() {
   
   return (
-    <div className='my-8'>
-    <div className=' flex flex-col w-full '>
+    <div className='my-8 flex flex-col w-full items-center justify-center'>
+    <div className=' flex flex-col w-full items-center justify-center '>
       <h1 className='text-lg my-6 text-[#02B1BF] text-center font-semibold'>Category 1</h1>
       <Swiper
         effect={'cards'}
@@ -44,7 +44,7 @@ export default function HealthCare() {
 
           
           <SwiperSlide key={index} className=' relative'>
-            <Link href={`/healthcare/info/${index}`} className='w-full'>
+            <Link href={`/healthcare/${index}`} className='w-full'>
             <Image
               src={item.src}
               alt="diaf"
@@ -83,7 +83,7 @@ export default function HealthCare() {
 
           
           <SwiperSlide key={index} className=' relative'>
-            <Link href={`/healthcare/info/${index}`} className='w-full'>
+            <Link href={`/healthcare/${index}`} className='w-full'>
             <Image
               src={item.src}
               alt="diaf"
@@ -122,7 +122,7 @@ export default function HealthCare() {
 
           
           <SwiperSlide key={index} className=' relative'>
-            <Link href={`/healthcare/info/${index}`} className='w-full'>
+            <Link href={`/healthcare/${index}`} className='w-full'>
             <Image
               src={item.src}
               alt="diaf"
@@ -161,7 +161,7 @@ export default function HealthCare() {
 
           
           <SwiperSlide key={index} className=' relative'>
-            <Link href={`/healthcare/info/${index}`} className='w-full'>
+            <Link href={`/healthcare/${index}`} className='w-full'>
             <Image
               src={item.src}
               alt="diaf"
