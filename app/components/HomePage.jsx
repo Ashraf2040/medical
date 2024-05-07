@@ -1,6 +1,7 @@
 "use client";
 
 import { Message, experimental_useAssistant as useAssistant } from "ai/react";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { useEffect, useRef, useState } from "react";
 import styles from "./loader.module.css";
  import Accordion from "./_Accordion/Accordion";
@@ -13,6 +14,7 @@ export default function HomePage() {
     useAssistant({
       api: "/api/assistant",
     });
+    const [showAccordion, setShowAccordion] = useState(false);
 
   const askedQuestions1 = [
     "How to improve soil condition? "
@@ -60,8 +62,8 @@ export default function HomePage() {
 
 
   return (
-    <div className=" flex flex-col w-full h-screen    items-center  mt-2   ">
-      <div className="navigate flex items-center flex-wrap justify-center gap-6 my-6 px-2 w-full sm:text-sm  ">
+    <div className=" flex flex-col w-full h-screen    items-center  mt-2 overflow-scroll   ">
+      <div className="navigate flex items-center flex-wrap justify-center gap-4 my-10 px-2 w-full sm:text-sm  ">
         {/* <button
           className="bg-gradient-to-br px-4 rounded-lg font-semibold text-white py-2 from-[#366a3d] to-green-400 sm:text-sm"
           onClick={handleSerchClick}
@@ -69,12 +71,12 @@ export default function HomePage() {
           Ask Ai
         </button> */}
         <Link href="/medical" className="">
-          <button className=" bg-[#dbeefd] px-2 rounded-lg  text-[14px] text-[#00afbf] py-1">
+          <button className=" bg-[#dbeefd] px-2 rounded-lg border-2 border-[#00afbf]  text-[16px] text-[#00afbf] py-2">
           Nearby Medicals 
           </button>
         </Link>
         <Link href="/healthcare">
-          <button className="bg-[#dbeefd] px-2 rounded-lg  text-[14px] text-[#00afbf] py-1 ">
+          <button className="bg-[#dbeefd] px-2 rounded-lg border-2 border-[#00afbf]  text-[16px] text-[#00afbf] py-2 ">
           Healthcare Education
           </button>
         </Link>
@@ -139,12 +141,12 @@ export default function HomePage() {
       </div>
       <form
         onSubmit={submitMessage}
-        className=" items-center justify-center relative    w-[80%]  flex ">
+        className=" items-center justify-center relative    w-[88%]  flex ">
       
         <input
           ref={inputRef}
           disabled={status !== "awaiting_message"}
-          className="  p-2 ring-1 ring-gray-200  outline-none focus:ring-[#00afbf]   bg-white  rounded-[10px]  w-full "
+          className="  p-4 ring-1 ring-gray-200  outline-none focus:ring-[#00afbf]   bg-white  rounded-[10px]  w-full "
           value={input}
           placeholder="Type your question..."
           onChange={handleInputChange}
@@ -162,7 +164,7 @@ export default function HomePage() {
       <div className="FAQ w-[90%]   grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         <div className="grid grid-cols-1 gap-2 w-full"> 
           {questionArray.map((question) => (
-          <button key={question}   className="bg-white cursor-pointer border-2 shadow-sm rounded-lg text-[#00afbf] py-2"  >{question}</button>
+          <button key={question}   className="bg-white cursor-pointer border-2 shadow-sm rounded-lg text-[#00afbf] py-2 my-2"  >{question}</button>
         ))}</div>
        
       </div>
@@ -190,8 +192,13 @@ export default function HomePage() {
           </span>
         </button>
       </div> */}
-      <h2 className="text-md text-[#00afbf] font-semibold mt-8 mb-4 bg-[#dbeefd] px-4  py-2 rounded-md"> Addtional Tips</h2>
-  <div className="  mt-2 w-full  "> <Accordion /></div>   
+      <botton onClick={() => setShowAccordion(!showAccordion)} className=" flex items-center gap-2 text-[#00afbf] font-semibold mt-8 mb-4 ">{showAccordion ? "Less" : "More"} Examples <span className="text-4xl"><RiArrowDropDownLine className="arrow"/></span> </botton>
+      <div className= {`mt-2 w-full ${showAccordion ? "block" : "hidden"} 
+        transition duration-1000 ease-in-out`} >
+      
+  <div  > <Accordion /></div>  
+      </div>
+       
 
       {/* <div className=" p-12  min-h-40 w-full flex flex-col  ">
           <div>

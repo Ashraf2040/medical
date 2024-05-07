@@ -46,7 +46,7 @@ export default function TopicInfo({params}) {
 
 
       </Link>
-    <h1 className='text-2xl   text-[#02B1BF] text w-fit  font-bold   rounded-lg p-3'>{dataCards[params.id].title}</h1>
+    <h1 className='text-2xl   text-[#02B1BF] text w-fit  font-bold   rounded-lg '>{dataCards[params.id].title}</h1>
     </div>
    
    
@@ -63,7 +63,7 @@ export default function TopicInfo({params}) {
           },
         }}
         modules={[EffectCreative]}
-        className="swiper min-h-[75%] min-w-[95%]"
+        className="swiper min-h-[82%] min-w-[95%]"
         onSlideChange={(e) => {
           const activeIndex = e.activeIndex;
           setCurrentIndex(activeIndex);
