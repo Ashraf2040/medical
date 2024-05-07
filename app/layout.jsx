@@ -29,10 +29,7 @@ const pathName=usePathname()
      <div>
       <Footer />
       </div>
-     <div className="  w-full">
-      
-      <Footer />
-      </div>
+     
           
        
       </body>
