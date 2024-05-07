@@ -26,6 +26,9 @@ const pathName=usePathname()
         </div>
         <div>{children}</div>
 
+     <div>
+      <Footer />
+      </div>
      <div className="  w-full">
       
       <Footer />

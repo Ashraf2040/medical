@@ -35,10 +35,18 @@
     color: #000;
   } */
   
+<<<<<<< HEAD:app/healthcare/[id]/styles.css
   .swiper {
     margin: 20px 0 0 0; 
     width: 95% !important;
     height: 75%;
+=======
+  /* .swiper {
+    margin: 20px 0 0 0;
+    
+    width: 95%;
+    height: 82%;
+>>>>>>> bd2b8ac765c574634d1088013a09d3ba527d589e:app/healthcare/info/[id]/styles.css
     border-radius: 15px;
     border: 2px solid white ;
   }
